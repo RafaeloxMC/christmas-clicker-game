@@ -1,9 +1,15 @@
-import Image from "next/image";
+"use client";
+import SantaClick from "@/components/SantaClick";
+import { useState } from "react";
 
 export default function Home() {
+	const [score, setScore] = useState(0);
+
 	return (
-		<div>
-			<h1 className="text-4xl">Click the Santa</h1>
+		<div className="flex flex-col gap-4 items-center justify-center">
+			<h1 className="text-8xl">Click the Santa</h1>
+			<SantaClick onClick={() => setScore(score + 1)} />
+			<span className="text-4xl">You clicked Santa {score} times!</span>
 		</div>
 	);
 }
