@@ -10,26 +10,18 @@
 }
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--background: oklch(74.6% 0.16 232.661);
+	--foreground: #ffffff;
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
+	--color-background: var(--color-sky-400);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
-}
-
 body {
-	background: var(--background);
+	background: var(--color-sky-400);
 	color: var(--foreground);
 	font-family: "MoC", Arial, Helvetica, sans-serif;
 }
